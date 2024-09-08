@@ -3,7 +3,7 @@ Let's Build Enterprise Payment Processing Department Using AI Agents, All Open S
 
 ## Introduction
 
-Full Article : [https://medium.com/@learn-simplified/how-about-an-ai-agent-that-builds-complete-software-projects-all-local-8ddda106011c
+Full Article : [[https://medium.com/@learn-simplified/how-about-an-ai-agent-that-builds-complete-software-projects-all-local-8ddda106011c](https://medium.com/@learn-simplified/lets-build-enterprise-payment-processing-department-using-ai-agents-all-open-source-8803d6b009d0)
 
 Imagine a world where your company's payment processing department runs like a well-oiled machine, handling vendor payments with the precision of a Swiss watch and the intelligence of a seasoned financial expert. Sound like a dream? Well, wake up and smell the AI-infused coffee, because that future is here, and it's ready to transform your business operations! Its called "AI Agents"
 
