@@ -9,7 +9,9 @@ class PaymentDetails(BaseModel):
     vendor: str
     amount: float
     date: str
-    services: str
+    services_summary: str
+    assessment_explanation: str
+    payment_report: str
 
 
 @app.post("/process_payment")

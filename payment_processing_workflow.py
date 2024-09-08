@@ -5,7 +5,7 @@ from typing import TypedDict, List, Dict
 import datetime
 from loguru import logger
 
-# Import node functions (to be implemented)
+# Import node functions
 from nodes.vendor_selector_node import vendor_selector_node
 from nodes.service_summarizer_node import service_summarizer_node
 from nodes.payment_assessor_node import payment_assessor_node
@@ -19,6 +19,8 @@ class PaymentState(TypedDict):
     vendor_name: str
     services_summary: str
     payment_amount: float
+    assessment_explanation: str
+    payment_report: str
     payment_details: Dict[str, any]
 
 
@@ -48,6 +50,7 @@ def run_workflow(date: str):
     return s
 
 
+# This function will be called by the Streamlit UI
 def process_payment(date: str):
     try:
         result = run_workflow(date)
