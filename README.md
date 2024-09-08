@@ -1,39 +1,42 @@
 # Lets_Build_Enterprise_Payment_Processing_Dept_Using_AI_Agents
 Let's Build Enterprise Payment Processing Department Using AI Agents, All Open Source
 
-
-
-# How I Trained AI Agents
-
-
 ## Introduction
 
 Full Article : [https://medium.com/@learn-simplified/how-about-an-ai-agent-that-builds-complete-software-projects-all-local-8ddda106011c
 
-An Agentic Local Software Developer, Think, Plan, Write Software Project, write test, run & fix test cases, ensure good test coverage, executes code, provide entire project with best practices.
+Imagine a world where your company's payment processing department runs like a well-oiled machine, handling vendor payments with the precision of a Swiss watch and the intelligence of a seasoned financial expert. Sound like a dream? Well, wake up and smell the AI-infused coffee, because that future is here, and it's ready to transform your business operations! Its called "AI Agents"
 
-Imagine a world where software writes itself, adapting and improving based on your needs. Sound like science fiction? Well, welcome to the cutting edge of AI-driven software development. In this article, we're diving into the fascinating realm of autonomous coding with our innovative CoderAIAgent. Buckle up, because the future of programming is here, and it's more exciting than you might think!
 
-## Why Read It?
+## Whats This Project About
 
-Companies that harness the power of AI are seeing dramatic improvements in efficiency, innovation, and competitiveness. This article isn't just about a cool piece of technology; it's about the future of how businesses will develop software.
-By exploring CoderAIAgent, we're providing a window into how AI can transform the software development process. Imagine being able to prototype new features in a fraction of the time, or having an AI assistant that can help refactor and improve your codebase continuously. These aren't far-off possibilities - they're becoming reality.
-While CoderAIAgent is a fictional company's implementation, it represents very real possibilities. This article will give you insights into:
- - How AI can speed up the software development lifecycle
- - The potential for reducing human error and improving code quality
- - Ways to free up developer time for more creative and strategic tasks
- - The implications for businesses in terms of cost savings and faster time-to-market
+This article takes you on a journey through the creation of an AI-Agent payment processing system. We're not just talking about a fancy calculator here - we're diving into a fully-fledged workflow that uses artificial intelligence to make decisions, generate reports, and handle payments with minimal human intervention.
+Here's what we cover:
+ - Setting up a workflow using LangGraph, a powerful tool for creating AI-driven processes
+ - Implementing AI agents for various tasks like selecting vendors, summarizing services, and assessing payments
+ - Using language models (specifically, Groq's LLMs) to generate human-like responses and make informed decisions
+ - Creating a user-friendly interface with Streamlit for easy interaction with the AI system
+ - Handling the nitty-gritty of sending payments securely using FastAPI
 
-Whether you're a tech leader looking to stay ahead of the curve, a developer curious about the future of your profession, or a business owner interested in cutting-edge tech solutions, this article offers valuable insights into the transformative potential of AI in software development.
+We'll walk you through each step, from the initial setup to the final implementation, showing you how these cutting-edge technologies can work together to create a robust, intelligent payment processing system.
+
+## Why Work on It?
+
+In today's fast-paced business world, staying ahead of the curve isn't just an advantage - it's a necessity. AI is no longer a futuristic concept; it's a present-day tool that's reshaping how businesses operate. This article shows you, through a practical example, how to harness the power of AI in your day-to-day operations.
+By implementing an AI-driven payment processing system like the one described here, businesses can:
+ - Reduce human error and bias in financial decisions
+ - Speed up payment processes, improving relationships with vendors
+ - Generate detailed, consistent reports for better financial tracking
+ - Free up human resources for more strategic tasks
+
+While our example company is fictional, the technologies and techniques discussed are very real and applicable to businesses of all sizes. Whether you're a tech-savvy startup or a traditional corporation looking to modernize, this article provides valuable insights into the practical application of AI in business processes.
 
 
 ## Architecture
 ![Design Diagram](design_docs/design.png)
 
 
-![Generated Project by Our CoderAIAdent](design_docs/output_proj.png)
-
-# Tutorial: Let's Build AI Agents That Build Entire Software Project For you
+# Tutorial: Let's Build Enterprise Payment Processing Department Using AI Agents, All Open Source
 
 ## Prerequisites
 - Python installed on your system.
@@ -57,8 +60,6 @@ Whether you're a tech leader looking to stay ahead of the curve, a developer cur
        ```bash
        source Lets_Build_Enterprise_Payment_Processing_Dept_Using_AI_Agents/bin/activate
        ```
-
-
    
 # Installation and Setup Guide
 
@@ -78,68 +79,16 @@ Follow these steps to set up and run the ResearchAgents project:
    ```
    This command installs all the necessary Python packages listed in the requirements.txt file.
 
-3. Create a new crew using crewai:
-   ```
-   crewai create crew research_agents
-   ```
-   This command sets up the initial structure for your ResearchAgents crew.
 
-4. Copy the main files from the git repository:
-   - Copy `main.py` and `crew.py` from the git repo into the autogenerated `research_agents/src/research_agents` directory.
-   These files contain the core functionality of the ResearchAgents project.
-
-5. Set up the environment variables:
-   - Copy the content of `.env.example` into a new `.env` file under the autogenerated `research_agents/src/research_agents` directory.
-   - Add your Groq API key to the `.env` file.
-   This step ensures that your API key is securely stored and accessible to the application.
-
-6. Add the settings file:
-   - Copy `settings.json` into the autogenerated `research_agents/src/research_agents` directory.
-   This file contains important configuration settings for the project.
-
-7. Navigate to the research_agents directory:
-   ```
-   cd research_agents
-   ```
-   This positions you in the correct directory for the following Poetry commands.
-
-8. Install Poetry:
-   ```
-   pip install poetry
-   ```
-   Poetry is used for dependency management and packaging in Python.
-
-9. Add the langchain_groq package:
-   ```
-   poetry add langchain_groq
-   ```
-   This adds the langchain_groq package to your project dependencies.
-
-10. Update and install dependencies:
-    ```
-    poetry lock
-    poetry install
-    ```
-    These commands update the lock file with the new dependency and install all project dependencies in a virtual environment.
-
-By following these steps, you'll have a fully set up and configured ResearchAgents project ready to run. This process ensures that all necessary components are in place, including the core files, environment variables, settings, and required packages.   
-     
-
-**Install Ollama**
-    
-    Ollama is a powerful tool for running large language models locally on your machine. Let's walk through the installation process step-by-step.
-    
-    Step 1: Download Ollama
-     - Visit the official Ollama website at https://ollama.com/ and click the "Download" button. The website will automatically detect your operating system and offer the appropriate installer
-    
-    Step 2: Install Ollama
-      - For Windows and Mac users: Double-click the downloaded installer file (.exe for Windows, .dmg for Mac) and follow the on-screen instructions
-      - For Linux users: Open a terminal and run the following command:
-
-## Run - AI Agent Training
+## Run - Enterprise Payment Processing Department Using AI Agents, All Open Source
 
    ```bash 
-      python src/main.py "create a fizzbuzz script"   
+      # Run Payment Gateway FAST API
+      python  vendor_payment_gateway.py
+      
+      # Run Payment Gateway FAST API
+      streamlit run payment_processing_workflow.py
+      
    ```
 
 
