@@ -5,14 +5,14 @@ from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
 from typing import Dict, Any
-
-MODEL_NAME = "Llama3-8b-8192"
+from nodes.constant import GROQ_API_KEY, MODEL_NAME
 
 load_dotenv()
 
+
 class LLMService:
     def __init__(self):
-        api_key = os.getenv("GROQ_API_KEY")
+        api_key = os.getenv(GROQ_API_KEY)
         self.llm = ChatGroq(model=MODEL_NAME, groq_api_key=api_key)
         self.json_parser = JsonOutputParser()
 

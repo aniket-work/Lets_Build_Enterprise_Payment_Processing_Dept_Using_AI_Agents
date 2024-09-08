@@ -5,6 +5,7 @@ from nodes.llm_service import llm_service
 
 
 def service_summarizer_node(state: dict) -> dict:
+
     prompt_template = """
     system
     You are an expert at summarizing services provided by vendors. Given a list of services, provide a detailed summary of what these services entail and their potential impact on the business. Return your response as JSON with a single key called 'services_summary'.
@@ -21,4 +22,4 @@ def service_summarizer_node(state: dict) -> dict:
     })
 
     logger.info(f"Services summary generated: {response['services_summary']}")
-    return response
+    return {"services_summary": response['services_summary']}

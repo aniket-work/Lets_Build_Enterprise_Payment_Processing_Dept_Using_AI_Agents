@@ -7,6 +7,7 @@ from nodes.llm_service import llm_service
 
 
 def payment_assessor_node(state: dict) -> dict:
+
     prompt_template = """
     system
     You are an expert financial analyst responsible for assessing payment amounts for vendor services. Given a summary of services, determine an appropriate payment amount and provide a detailed explanation of your assessment. Return your response as JSON with keys 'payment_amount' (float) and 'assessment_explanation' (string).
@@ -23,4 +24,7 @@ def payment_assessor_node(state: dict) -> dict:
 
     logger.info(
         f"Payment assessment: Amount: ${response['payment_amount']}, Explanation: {response['assessment_explanation']}")
-    return response
+    return {
+        "payment_amount": response['payment_amount'],
+        "assessment_explanation": response['assessment_explanation']
+    }

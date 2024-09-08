@@ -8,6 +8,7 @@ from nodes.llm_service import llm_service
 
 
 def payment_sender_node(state: dict) -> dict:
+
     prompt_template = """
     system
     You are a financial reporting expert responsible for generating detailed payment reports. Given the payment details, create a comprehensive report explaining the payment process, amount, and services covered. Return your response as JSON with a single key called 'payment_report'.

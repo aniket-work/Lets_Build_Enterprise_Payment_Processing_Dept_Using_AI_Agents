@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
+from typing import Dict, Any
 from loguru import logger
 
 app = FastAPI()
@@ -15,8 +16,8 @@ class PaymentDetails(BaseModel):
 
 
 @app.post("/process_payment")
-async def process_payment(payment: PaymentDetails):
-    logger.info(f"Received payment: {payment.dict()}")
+async def process_payment(payment: Dict[str, Any]):
+    logger.info(f"Received payment: {payment}")
     # In a real scenario, you would process the payment here
     return {"status": "Payment processed successfully"}
 
